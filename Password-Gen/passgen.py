@@ -45,13 +45,22 @@ rs13=(passwords[r13])
 rs14=(passwords[r14])
 
 data=int(input("How many letters and numbers 5, 10 or 15: "))
+data1=str(input("Name for your password: "))
+data2=str(input("Password text file name is?(DONT PUT .txt or .something to the end!): "))
+f=open(data2 + ".txt","w")
 
 if data==5:
-    print(rs + rs1 + rs2 + rs3 + rs4)
+    f.write(str(data1 + ":" + "\n" + rs + rs1 + rs2 + rs3 + rs4))
+    f.close()
+    print("Password saved to text file")
 elif data==10:
-    print(rs + rs1 + rs2 + rs3 + rs4 + rs5 + rs6 + rs7 + rs8 + rs9)
+    f.write(str(data1 + ":" + "\n" + rs + rs1 + rs2 + rs3 + rs4 + rs5 + rs6 + rs7 + rs8 + rs9))
+    f.close()
+    print("Password saved to text file")
 elif data==15:
-    print(rs + rs1 + rs2 + rs3 + rs4 + rs5 + rs6 + rs7 + rs8 + rs9 + rs10 + rs11 + rs12 + rs13 + rs14)
+    f.write(str(data1 + ":" + "\n" + rs + rs1 + rs2 + rs3 + rs4 + rs5 + rs6 + rs7 + rs8 + rs9 + rs10 + rs11 + rs12 + rs13 + rs14))
+    f.close()
+    print("Password saved to text file")
 else:
     print("5, 10 or 15")
     pass
